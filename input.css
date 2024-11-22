@@ -1,0 +1,45 @@
+
+input[type="text"]{
+    -webkit-text-security: square;
+}
+
+input[type="password"]{
+    font-family: Verdana, Tahoma, sans-serif;
+    letter-spacing: 1.5em;
+}
+
+input[type="password"]:checked{
+    -webkit-text-security: none;
+}
+
+input[type="button"]{
+    pointer-events: none;
+}
+
+input[type="checkbox"]:checked {
+    appearance: none;
+ }
+
+ input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #555;
+    border-radius: 50%;
+    background-color: red;
+}
+
+input[type="radio"]:checked {
+    background-color: #007bff;
+    border-color: pink;
+}
+
+input[type="radio"]:checked::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 3px auto;
+}
