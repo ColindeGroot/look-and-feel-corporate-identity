@@ -11,27 +11,27 @@ body {
     line-height: 1.4;
     font-size: 18px;
 
-    /*colors*/
     --darkred: #6A0025;
     --accentred: #6a002580;
     --white: #fff;
     --lightred: #F0E5E9;
 
-    /* font familys */
+   /* in progress
+     font familys 
     --vag-rund: Arial, Helvetica, sans-serif;
     --open-sans: "Open Sans";
 
-    /*font sizes*/
+    font sizes
     --font-size-xl: 2em;
     --font-size-l: 1.2em;
     --font-size-m: 1em;
     --font-size-s: 0.875em;
 
-    /*font weight*/
+    font weight
     --light: 400;
     --normal: 500;
     --bold: 600;
-
+    */ 
 }
 
 
@@ -84,16 +84,25 @@ button{
     }
 }
 
-.primary-btn{
-    background-color: var(--darkred, #6A0025);
-}
-
-.primary-btn:hover{
-    background-color: var(--accentred);
-}
 
 .search-btn{
     background-color: var(--accentred);
+    color: var(--darkred);
+}
+
+.cat-button {
+    /* webinars buttons */
+    padding: 10px 20px;
+    border: 2px solid var(--darkred);
+    color: var(--white);
+    background-color: var(--darkred);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cat-button:hover {
+    background-color: var(--white);
     color: var(--darkred);
 }
 
@@ -104,6 +113,15 @@ input[type="button"]{
 input[type="checkbox"]:checked {
     background-color: var(--accentred);
  }
+
+input[type="search"]{
+    width: 100%;
+    height: 3rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border: none;
+    background-color: var(--white) ;
+}
 
 .wrappers {
     /*sections die een padding mogen*/
@@ -244,41 +262,6 @@ input[type="checkbox"]:checked {
     }
 }
 
-.cat-button {
-    /* webinars buttons */
-    padding: 10px 20px;
-    border: 2px solid var(--darkred);
-    color: var(--white);
-    background-color: var(--darkred);
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.cat-button:hover {
-    background-color: var(--white);
-    color: var(--darkred);
-}
-
-
-/*homepage webinar wrapper*/
-.webinar-wrapper {
-    display: flex;
-    flex-flow: row nowrap;
-    overflow-x: auto;
-    scrollbar-color: var(--darkred) var(--lightred);
-    gap: 0.5rem;
-    width: 92vw;
-    justify-content: space-evenly;
-    align-items: center;
-
-    @media (min-width:1050px) {
-        gap: 1rem;
-        justify-content: space-evenly;
-    }
-}
-
-
 .webinar-article {
     border: 1px solid #ddd;
     width: 90%;
@@ -342,35 +325,6 @@ input[type="checkbox"]:checked {
     margin-left: 15px;
 }
 
-.contouring-wrapper {
-    display: flex;
-    scrollbar-color: var(--darkred) var(--lightred);
-    flex-flow: row nowrap;
-    justify-content: start;
-    align-items: center;
-    gap: 1.5rem;
-    width: 92vw;
-    overflow-x: auto;
-
-}
-
-.contouring {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    width: 90%;
-    margin-bottom: 30px;
-    flex-shrink: 0;
-
-    @media (min-width: 550px) {
-        max-width: 40%;
-    }
-
-    @media (min-width: 1050px) {
-        max-width: 20%;
-    }
-}
-
 .image-container {
     position: relative;
     /* Voor positionering van het label op de afbeelding */
@@ -398,25 +352,7 @@ input[type="checkbox"]:checked {
     font-size: 12px;
 }
 
-/* Footer */
-footer {
-    background-color: var(--darkred);
-    color: var(--white);
-    padding: 20px;
-    text-align: center;
 
-    ul {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-
-        li {
-            cursor: pointer;
-        }
-    }
-}
-
-/* webinar page */
 
 .latest {
     gap: 2rem;
@@ -479,5 +415,23 @@ footer {
 
     @media (min-width:950px) {
         justify-content: start;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--darkred);
+    color: var(--white);
+    padding: 20px;
+    text-align: center;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+        li {
+            cursor: pointer;
+        }
     }
 }
